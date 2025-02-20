@@ -11,5 +11,10 @@
      "matches": ["*://*.indeed.com/*"],
      "js": ["content/content.js"],
      "css": ["content/overlay.css"]
-  }]
+  }],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "wenlongtamu@gmail.com"
+    }
+  }
 }
