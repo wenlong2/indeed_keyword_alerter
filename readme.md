@@ -36,5 +36,5 @@ You can find the source code and contribute to the project on GitHub: [``https:/
 
 ## License
 
-Wenlong Yuan, all rights reserved. Not responsible for damages. Not responsible for damages by using this extension.
+Wenlong Yuan, all rights reserved. The developers are not responsible for damages from using this extension.
 
