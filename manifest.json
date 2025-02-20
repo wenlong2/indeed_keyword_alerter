@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Indeed Job Description Keyword Alerter",
+  "version": "0.1",
+  "description": "A Firefox extension that highlights specified keywords in Indeed job descriptions and alerts users.",
+  "author": "Wenlong Yuan",
+  "homepage_url": "https://github.com/your-repo-link",
+  "action": { "default_popup": "popup/popup.html" },
+  "permissions": ["storage"],
+  "content_scripts": [{
+     "matches": ["*://*.indeed.com/*"],
+     "js": ["content/content.js"],
+     "css": ["content/overlay.css"]
+  }]
+}
