@@ -32,7 +32,10 @@ This Firefox addon scans job descriptions on Indeed and alerts users if specifie
 
 ## GitHub Repository
 
-You can find the source code and contribute to the project on GitHub: [``https://github.com/wenlong2/indeed_keyword_alerter``](https://github.com/wenlong2/indeed_keyword_alerter)
+You can find the source code and contribute to the project 
+
+- on GitHub: [``https://github.com/wenlong2/indeed_keyword_alerter``](https://github.com/wenlong2/indeed_keyword_alerter) 
+- contact me: wenlongtamu  AT  gmail.com
 
 ## License
 
