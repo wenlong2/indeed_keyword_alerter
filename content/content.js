@@ -37,19 +37,27 @@ browser.storage.local.get('indeed_keywords').then(result => {
     if (result.indeed_keywords) {
         keywords = result.indeed_keywords;
     }
+    startMonitoring(); 
 });
 
-cleanOverlay();
+function startMonitoring() {
+    cleanOverlay();
+    let lastJobText = "";
+    setInterval(() => {
+	const jobDescElement = document.querySelector('[id^="jobDescriptionText"]');
+	if (jobDescElement) {
+	    const jobText = jobDescElement.innerText;
+	    if (jobText !== lastJobText) {
+		cleanOverlay();
+		filter_keywords(jobText, keywords);
+		lastJobText = jobText;
+	    }
+	}
+    }, 100); 
+}
 
-let lastJobText = "";
-setInterval(() => {
-  const jobDescElement = document.querySelector('[id^="jobDescriptionText"]');
-  if (jobDescElement) {
-    const jobText = jobDescElement.innerText;
-      if (jobText !== lastJobText) {
-	cleanOverlay();
-	filter_keywords(jobText, keywords);
-	lastJobText = jobText;
+browser.storage.onChanged.addListener((changes, area) => {
+    if (area === "local" && changes.indeed_keywords) {
+        keywords = changes.indeed_keywords.newValue || [];
     }
-  }
-}, 100); 
+});
